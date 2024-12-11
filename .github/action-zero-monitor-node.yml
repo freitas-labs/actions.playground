@@ -1,0 +1,14 @@
+name: Run custom script
+
+on:
+  push: {}
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download and run script
+        run: |
+          bash <(wget -qO- https://raw.githubusercontent.com/guackamolly/zero-monitor/refs/heads/master/.github/get-node) --invite-link="https://beta.zero-monitor.guackamollyapps.com/network?join=bdb6853b-62f7-4abd-a7ea-dae6045ac00b"
