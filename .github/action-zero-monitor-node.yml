@@ -1,7 +1,7 @@
 name: Run custom script
 
 on:
-  push: {}
+  push:
 
 jobs:
   run-script:
